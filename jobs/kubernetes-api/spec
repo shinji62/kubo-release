@@ -10,6 +10,9 @@ templates:
   config/etcd-ca.crt.erb: config/etcd-ca.crt
   config/etcd-client.crt.erb: config/etcd-client.crt
   config/etcd-client.key.erb: config/etcd-client.key
+  config/kubelet-ca.crt.erb: config/kubelet-ca.crt
+  config/kubelet-client.crt.erb: config/kubelet-client.crt
+  config/kubelet-client.key.erb: config/kubelet-client.key
 
 packages:
 - pid_utils
@@ -22,6 +25,12 @@ properties:
     description: The password for the admin account
   kubelet-password:
     description: The password for the kubelet user
+  kubelet-ca:
+    description: The CA certificate of the //TODO what exactly is doing
+  kubelet-client-cert:
+    description: The client certificate of the api server
+  kubelet-client-key:
+    description: The private key for the client certificate
   kube-proxy-password:
     description: The password for the kube-proxy user
   kube-scheduler-password:
